@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<style>
+body {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table td, table th {
+	border: 1px solid #006D77;
+	padding: 8px;
+}
+
+table tr {
+	background-color: #e8fdff;
+}
+
+table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #006D77;
+	color: white;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Team Scheduler: Preferred Days Page</title>
+</head>
+<body>
+	<h1>Team Schedule</h1>
+	<hr>
+	<table class="customers"
+		th:if="${meetingList !=null AND meetingList !=''}">
+		<tr>
+			<th>User:</th>
+			<th>First Day:</th>
+			<th>Time-slot:</th>
+			<th>Second Day:</th>
+			<th>Time-slot:</th>
+		</tr>
+		<tr th:each="m:${meetingList}">
+			<td th:text="${m.email}"></td>
+			<td th:text="${m.meetingDate1}"></td>
+			<td th:text="${m.meetingTime1}"></td>
+			<td th:text="${m.meetingDate2}"></td>
+			<td th:text="${m.meetingTime2}"></td>
+		</tr>
+	</table>
+	<p>
+		<a href="/" th:href="@{secure/}">Scheduling Page</a>
+	</p>
+	<p>
+		<a href="/" th:href="@{/}">Home page</a>
+	</p>
+	<p>
+		<a href="#" th:href="@{/logout}">Logout</a>
+	</p>
+</body>
+</html>

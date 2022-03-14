@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Team Scheduler: Home Page</title>
+<style>
+body {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<h1>Welcome to Team Scheduler</h1>
+	<hr>
+	<p>Welcome to our team meeting scheduler. if you haven't already
+		logged in, please do so. otherwise please register</p>
+	<p>
+		Please <a href="/secure" th:href="@{/secure}">Login</a> <br>or<br>
+		Please <a href="/secure" th:href="@{/register}">Register</a>
+	</p>
+</body>
+</html>

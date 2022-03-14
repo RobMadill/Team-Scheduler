@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<style>
+body {
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #006D77;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Team Scheduler: Time Selection Page</title>
+</head>
+<body>
+	<h1>Select Preferred Time-Slots</h1>
+	<h2>Active User: [[${email}]]</h2>
+	<hr>
+	<form method="post" action="" th:action="@{/insertMeeting}"
+		th:object="${meeting}">
+		<input type="hidden" name="id" th:field="*{id}" />
+		<div class="box">
+			<p>First day:</p>
+			<select th:field="*{meetingDate1}">
+				<option th:each="w:*{weekdays}" th:value="${w}" th:text="${w}" />
+			</select> <select th:field="*{meetingTime1}">
+				<option th:each="t:*{timeSlot}" th:value="${t}" th:text="${t}" />
+			</select>
+			<p>Second day:</p>
+			<select th:field="*{meetingDate2}">
+				<option th:each="w:*{weekdays}" th:value="${w}" th:text="${w}" />
+			</select> <select th:field="*{meetingTime2}">
+				<option th:each="t:*{timeSlot}" th:value="${t}" th:text="${t}" />
+			</select><br>
+		</div>
+		<br>
+		<button type="submit" value="Send Preferred Time" name="Send-Time">Send
+			Preferred Time</button>
+	</form>
+	<p>
+		<a href="/" th:href="@{/}">Home page</a>
+	</p>
+	<p>
+		<a href="#" th:href="@{/logout}">Logout</a>
+	</p>
+</body>
+</html>

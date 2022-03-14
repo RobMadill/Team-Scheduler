@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Team Scheduler: Register Account Page</title>
+<style>
+body {
+	text-align: center;
+}
+
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type=email], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #006D77;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+.container {
+	padding: 16px;
+}
+</style>
+</head>
+<body>
+	<h1>Register Account</h1>
+	<hr>
+	<form name="form" action="#" th:action="@{/register}" method="post"
+		onsubmit="return verify()">
+		<div class="container">
+			<input type="email" name="username" placeholder="Enter Email:" /><br>
+			<input type="password" name="password" placeholder="Enter Password:" /><br>
+			<input type="password" name="verifyPassword"
+				placeholder="Re-enter Password:" /><br>
+		</div>
+		<button type="submit" value="Register">Register</button>
+	</form>
+	<p>
+		<a href="/" th:href="@{/}">Home page</a>
+	</p>
+	<p>
+		<a href="#" th:href="@{/logout}">Login</a>
+	</p>
+</body>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+</html>
