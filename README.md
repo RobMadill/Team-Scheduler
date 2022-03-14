@@ -1,10 +1,10 @@
 # Team Schedular
  
 <h2>Requirements:</h2>
- Sprint Boot 
- Spring Security
- Lombok
- H2 Database 
+ Sprint Boot<br> 
+ Spring Security<br>
+ Lombok<br>
+ H2 Database<br> 
  Thymeleaf
 
 <h2>Project Description:</h2> 
