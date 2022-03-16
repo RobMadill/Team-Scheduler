@@ -8,7 +8,7 @@
  Thymeleaf
 
 <h2>Project Description:</h2> 
- Second assignment for Java Enterprise at Sheridan College 2021. This is a team scheduler built with security in mind. This site allows only registered members to login and submit two preferred times throughout the week for their team meetings. Once their times are submitted, they will be presented a page that will show the rest of the teams preferred times. <br>
+ Second assignment for Java Enterprise at Sheridan College 2021. This is a team scheduler built with security in mind. This site allows only registered members to login and submit two preferred times throughout the week for their team meetings. Once their times are submitted, they will be presented a page that will show the rest of the teams preferred times. <br><br>
 
 First we start at the home Page:
 ![Welcome-page](https://user-images.githubusercontent.com/19481324/158495509-76747421-dbc5-4f14-b43a-79c1bc02ee42.png)
